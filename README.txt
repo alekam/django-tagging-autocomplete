@@ -1,11 +1,17 @@
+*** django-tagging-autocomplete ***
+
+This Django reusable app extends djang-tagging and provides you with a form widget supporting javascript autocompletion of tags.
+It is forked from http://code.google.com/p/django-tagging-autocomplete/
+
 *** Instalation ***
 
    1. You need to have django-tagging already installed
    2. Download django-tagging-autocomplete and use setup.py to install it on your system:
 		python setup.py install
-   3. Download jquery-autocomplete and put it in the folder specified in your project's MEDIA_URL setting. If you want to put it somewhere else add TAGGING_AUTOCOMPLETE_JS_BASE_URL to your project settings.
-   4. Add "tagging_autocomplete" to installed apps in your project's settings.
-   5. Add the following line to your project's urls.py file:
+   3. Download jquery-ui and include it in your templates. # TODO: automate this
+   4. Copy "tagging_autocomplete.js" from django-tagging-autocomplete in the folder specified in your project's MEDIA_URL setting. If you want to put it somewhere else add TAGGING_AUTOCOMPLETE_JS_BASE_URL to your project settings.
+   5. Add "tagging_autocomplete" to installed apps in your project's settings.
+   6. Add the following line to your project's urls.py file:
 
       (r'^tagging_autocomplete/', include('tagging_autocomplete.urls')),
 
