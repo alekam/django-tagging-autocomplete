@@ -9,7 +9,7 @@ def list_tags(request):
 	    tags = Tag.objects.filter(name__istartswith=request.GET['term']).values_list('name', flat=True)
 	except MultiValueDictKeyError:
 		tags = []
-	
+
 	return JsonResponse([x.encode('utf-8') for x in tags])
 
 
